@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style_detailslivre.css' %}">
+    <title>Détails du Livre</title>
+
+</head>
+<body>
+    <h1>Détails du Livre</h1>
+    <div class="book-details">
+        <table>
+            <tr>
+                <th>Titre</th>
+                <td>{{ livre.titre }}</td>
+            </tr>
+            <tr>
+                <th>Auteurs</th>
+                <td>
+                    <ul class="author-list">
+                        {% for auteur in livre.auteurs.all %}
+                            <li>{{ auteur.nom }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>ISBN</th>
+                <td>{{ livre.isbn }}</td>
+            </tr>
+            <tr>
+                <th>Synopsis</th>
+                <td>{{ livre.synopsis }}</td>
+            </tr>
+            <!-- Ajoutez d'autres détails du livre ici -->
+        </table>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <button type="submit">Emprunter ce livre</button>
+        </form>
+        <a href="{% url 'liste_livres' %}">Retourner à la liste des livres</a>
+    </div>
+</body>
+</html>
+

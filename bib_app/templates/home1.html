@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="{% static 'css/style_menu.css' %}">
+</head>
+<body>
+{% include 'menu.html' %}
+    <h1>Bienvenue sur la page d'accueil</h1>
+    <p>Cliquez sur le lien ci-dessous pour accéder à la liste des livres :</p>
+    <a href="{% url 'liste_livres' %}">Liste des Livres</a>
+</body>
+</html>

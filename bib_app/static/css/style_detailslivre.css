@@ -1,0 +1,85 @@
+/* Réinitialisation des marges et des rembourrages */
+body, h1, h2, p, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de base pour le corps */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Style pour le titre principal */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style pour la zone des détails du livre */
+.book-details {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Style pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Style pour les cellules d'en-tête de tableau */
+th {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style pour les cellules de données de tableau */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style pour la liste des auteurs */
+.author-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+/* Style pour chaque élément de la liste des auteurs */
+.author-list li {
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+/* Style pour les liens */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* Style pour les liens au survol */
+a:hover {
+    text-decoration: underline;
+}
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style pour le bouton au survol */
+button:hover {
+    background-color: #0056a3;
+}

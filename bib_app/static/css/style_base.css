@@ -1,0 +1,41 @@
+
+/* Style pour le menu */
+.menu {
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.menu table {
+  width: 100%;
+}
+
+.menu table tr td {
+  padding: 5px;
+}
+
+.menu table tr td a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu table tr td button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.menu table tr td.button-container {
+  text-align: right; /* Pour aligner le contenu à droite */
+}
+
+.menu table tr td button:hover {
+  background-color: #c0392b;
+}
+
+/* Style pour le lien actif dans le menu */
+.menu table tr td a.active {
+  font-weight: bold;
+}
+

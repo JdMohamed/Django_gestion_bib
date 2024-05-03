@@ -1,0 +1,37 @@
+.connexion_content {
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.connexion_content h1 {
+    text-align: center;
+    color: #333;
+}
+
+.connexion_content form {
+    margin-top: 20px;
+}
+
+.connexion_content form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.connexion_content form p {
+    margin-bottom: 10px; /* Espacement entre les éléments de formulaire */
+}
+
+.connexion_content form button:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}

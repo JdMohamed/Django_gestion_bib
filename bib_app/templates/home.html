@@ -1,0 +1,16 @@
+{% load static %}
+{% include 'base.html' %}
+
+
+{% block content %}
+<div class="home_content">
+    {% if user.is_authenticated %}
+    <p>Hi {{ user.username }}!</p>
+    <img src="{% static 'image/img01.jpg' %}" alt="Description de l'image">
+    <p><a href="{% url 'liste_livres' %}">Consulter la liste des Livres</a></p>
+    {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    </div>
+{% endblock %}

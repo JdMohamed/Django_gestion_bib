@@ -1,0 +1,56 @@
+/* styles.css */
+
+/* Style pour le bloc de contenu */
+.content-block {
+  margin: 20px auto; /* Pour centrer le bloc horizontalement */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 400px; /* Largeur maximale du bloc */
+}
+
+/* Style pour le titre de la page */
+.content-block h2 {
+  color: #333;
+  text-align: center; /* Pour centrer le titre */
+}
+
+/* Style pour le formulaire */
+.content-block form {
+  margin-top: 20px;
+}
+
+/* Style pour les champs de formulaire */
+.content-block form input[type="text"],
+.content-block form input[type="email"],
+.content-block form input[type="password"] {
+  width: calc(100% - 20px); /* Réduire légèrement la largeur pour compenser les marges */
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  font-size: 14px; /* Taille de police réduite */
+  line-height: 1.5; /* Hauteur de ligne */
+}
+
+/* Style pour le bouton de soumission */
+.content-block form button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: calc(100% - 20px); /* Réduire légèrement la largeur pour compenser les marges */
+  font-size: 14px; /* Taille de police réduite */
+  line-height: 1.5; /* Hauteur de ligne */
+}
+
+/* Style pour le bouton de soumission au survol */
+.content-block form button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Style pour les messages d'erreur du formulaire */
+.content-block .error-message {
+  color: red;
+}

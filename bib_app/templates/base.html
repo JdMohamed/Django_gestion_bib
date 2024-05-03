@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Django Gestion de Bibliothéque</title>
+    <link rel="stylesheet" href="{% static 'css/style_base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_inscription.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_listelivres.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_connexion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+</head>
+<body>
+      <div class="menu">
+    <table>
+        <tr>
+            <td><a href="{% url 'home' %}">Home</a></td>
+            <td><a href="{% url 'liste_livres' %}">Liste des Livres</a></td>
+            <td><a href="{% url 'signup' %}">S'enregistrer</a></td>
+            <td><a href="{% url 'admin:index' %}">Administration</a></td>
+            <td class="button-container"><form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                <button  type="submit">Log Out</button></form></td>
+
+        </tr>
+    </table>
+</div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
