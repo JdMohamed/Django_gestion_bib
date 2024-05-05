@@ -1,5 +1,6 @@
 import datetime
 import jwt
+from django.shortcuts import get_object_or_404
 from rest_framework import status, viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -14,6 +15,16 @@ class RegisterView(APIView):
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+        return Response(serializer.data)
+
+class UpdateView(APIView,id):
+    def post(self, request):
+        user = get_object_or_404(User, pk=id)
+        if user is None:
+            raise AuthenticationFailed('User not found')
+        user.is_superuser=True
+        user.save();
+        serializer = UserSerializer(user)
         return Response(serializer.data)
 
 
@@ -40,8 +51,10 @@ class LoginView(APIView):
 
         response = Response()
         response.set_cookie(key='myToken', value=token, httponly=True, samesite="none", secure= True)
+        serializer = UserSerializer(user)
         response.data = {
-            'myToken': token
+            'myToken': token,
+            'user':serializer.data
         }
 
         return response
