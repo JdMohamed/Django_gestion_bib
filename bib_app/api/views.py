@@ -17,12 +17,16 @@ class RegisterView(APIView):
         serializer.save()
         return Response(serializer.data)
 
-class UpdateView(APIView,id):
-    def post(self, request):
-        user = get_object_or_404(User, pk=id)
+class UpdateView(APIView):
+    def put(self, request):
+        email = request.data['email']
+        user = User.objects.filter(email=email).first()
         if user is None:
             raise AuthenticationFailed('User not found')
-        user.is_superuser=True
+        if(user.is_superuser):
+            user.is_superuser=False
+        else:
+            user.is_superuser=True
         user.save();
         serializer = UserSerializer(user)
         return Response(serializer.data)
